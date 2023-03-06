@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #map{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+    <title>Corona Map</title>
+</head>
+<body>
+   <div id="map"></div>
+</body>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    </script>
+<script>
+     
+	mapboxgl.accessToken = 'pk.eyJ1Ijoic2F0eWFtc2l2YW1wYWwiLCJhIjoiY2w3OXRieWdpMG16dTNub2xreGoyODMwdyJ9.F5_H-LU_csLln-hyNBnxUQ';
+const map = new mapboxgl.Map({
+container: 'map',
+// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+style: 'mapbox://styles/mapbox/satellite-streets-v11',
+zoom: 1.5,
+center: [30, 50],
+projection: 'globe'
+});
+ 
+map.on('load', () => {
+// Set the default atmosphere style
+map.setFog({});
+});
+
+</script>
+<script src="index.js"></script>
+
+</html>
